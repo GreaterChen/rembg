@@ -45,7 +45,7 @@ def cv2np(img):
 
 def pil2base64(img):
     image_data = io.BytesIO()
-    img.save(image_data, format('JPEG'))
+    img.save(image_data, format('PNG'))
     image_data_bytes = image_data.getvalue()
     encoded_image = base64.b64encode(image_data_bytes).decode('utf-8')
     return encoded_image
